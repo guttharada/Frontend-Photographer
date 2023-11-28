@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Rubik:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rubik", "Poppins", sans-serif;
+}
+/* Banner*/
+.header {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.6rem;
+  color: #fff;
+  background: linear-gradient(#00000044, #111111bb), url(/img/Banner.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.title {
+  font-size: 120px;
+  color: white;
+  position: relative;
+  line-height: 0.9em;
+  letter-spacing: 2px;
+  transform: rotate(-28deg) skew(25deg);
+  text-shadow: -1px 1px #d9d9d9, -2px 2px #d9d9d9, -3px 3px #d9d9d9,
+    -4px 4px #d9d9d9, -5px 5px #d9d9d9, -6px 6px #d9d9d9, -7px 7px #d9d9d9,
+    -8px 8px #d9d9d9, -9px 9px #d9d9d9, -10px 10px #d9d9d9, -11px 11px #d9d9d9,
+    -12px 12px #d9d9d9, -13px 13px #d9d9d9, -14px 14px #d9d9d9,
+    -15px 15px #d9d9d9, -16px 16px #d9d9d9, -17px 17px #d9d9d9;
+  cursor: default;
+  margin-top: 50px;
+}
+a#linkin {
+  color: yellow;
+  text-decoration: none;
+  cursor: default;
+}
+a#linkin:hover{
+    color: red;
+    text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: red;
+}
+/* Banner*/
