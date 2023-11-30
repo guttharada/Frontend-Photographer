@@ -12,8 +12,13 @@ h2,
 h3 {
   font-family: "Rubik", "Poppins", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* Banner*/
 .header {
+  position: relative; /* เพิ่ม line นี้เพื่อให้สามารถใช้ z-index ได้ */
+  z-index: 1000; /* เพิ่ม line นี้เพื่อกำหนดลำดับการแสดงผล */
   padding: 10%;
   display: flex;
   flex-direction: column;
@@ -42,16 +47,146 @@ h3 {
     -15px 15px #d9d9d9, -16px 16px #d9d9d9, -17px 17px #d9d9d9;
   cursor: default;
   margin-top: 50px;
+  z-index: 2; /* เพิ่ม line นี้เพื่อกำหนดลำดับการแสดงผล */
+}
+.subtitle:hover {
+  color: green;
+}
+strong:hover {
+  color: yellow;
 }
 a#linkin {
-  color: yellow;
+  color: Purple;
   text-decoration: none;
   cursor: default;
 }
-a#linkin:hover{
-    color: red;
-    text-decoration: underline;
+a#linkin:hover {
+  color: red;
+  text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: red;
 }
+.hero__scroll-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.hero__scroll-btn:hover {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+}
 /* Banner*/
+/* Section2 */
+.fixed_container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60vw;
+  height: 100vh;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.fixed_container .nav_left {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+
+.fixed_container .logo {
+  font-family: "Rubik", "Poppins", sans-serif;
+  font-size: 1.25vw;
+}
+
+.fixed_container .marquee {
+  font-size: 40vw;
+  font-family: "Rubik", "Poppins", sans-serif;
+  margin-top: -10vh;
+}
+
+.fixed_container .text {
+  width: 50%;
+  font-size: 1.25vw;
+  padding-left: 7.5vw;
+  margin-top: -17.5vh;
+}
+
+.scroll_section {
+  position: relative;
+  z-index: 4; /* เพิ่ม line นี้เพื่อกำหนดลำดับการแสดงผล */
+  padding-top: 15vh;
+  padding-left: 1350px;
+  display: flex;
+  flex-direction: row; /* แก้เป็น row เพื่อให้เรียงตามแนวนอน */
+  justify-content: end; /* ให้ส่วน scroll_section อยู่ขวาสุด */
+  align-items: center; /* ให้ส่วน scroll_section อยู่ตรงกลางตามแนวตั้ง */
+}
+
+.scroll_section {
+  display: flex;
+  gap: 2vw;
+}
+
+.scroll_section span {
+  cursor: pointer;
+}
+
+.scroll_section .par {
+  font-size: 1.25vw;
+  width: 100%;
+}
+
+.scroll_section .top_person {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: end;
+}
+
+.scroll_section .con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
+}
+
+.scroll_section span {
+  cursor: default;
+  text-decoration: none;
+}
+
+.scroll_section .person {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85vw;
+  align-items: end; /* จัด align ของ person เป็นขวา */
+}
+
+.scroll_section .person img {
+  margin-bottom: 1vh;
+  width: 800px; /* ทำให้รูปภาพขยายเต็มความกว้าง */
+  height: auto; /* ป้องกันการเกิดการบีบอัดที่ไม่เหมาะสม */
+}
+img {
+  z-index: 2;
+}
+
+.scroll_section .link {
+  font-size: 0.95vw;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 10vh;
+  margin-top: 2.5vh;
+  padding-right: 30px;
+  cursor: pointer;
+}
+/* Section2 */

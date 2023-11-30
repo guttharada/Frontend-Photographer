@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Photo Thailand</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Banner-->
+    <section class="header" id="home">
+      <h1 class="title" id="styleBanner">
+        <span class="subtitle"> STREET </span>
+        <br />
+        <strong> PHOTO </strong>
+        <br />
+        <a
+          href="#linkin"
+          id="linkin"
+          onclick="window.open('https://www.facebook.com/groups/streetphotothailand')"
+          ><h3>THAILAND</h3></a
+        >
+      </h1>
+      <a href="#scroll-down" class="hero__scroll-btn">Explore</a>
+    </section>
+    <!--Banner-->
+    <!--Section2-->
+    <div class="fixed_container">
+      <div class="nav_left">
+        <span class="logo"></span>
+        <span class="nav_left_link">Want to learn more about us?</span>
+      </div>
+      <marquee scrollamount="20" direction="left" class="marquee"
+        >Billionaires & Millionaires</marquee
+      >
+      <span class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, nesciunt.
+        Alias doloribus quas perferendis esse quis optio ducimus? Maxime libero.
+      </span>
+    </div>
+    <div class="scroll_section">
+      <div class="top_person">
+        <div class="con">
+          <div class="person">
+            <img src="/img/person_1.jpeg" alt="img2" />
+            <span>Jetty</span>
+            <span>Age - 29</span>
+            <span>Net Worth - $211B</span>
+            <span class="Learn_more_link">Learn more</span>
+          </div>
+        </div>
+
+        <span class="link">Click here to but books</span>
+      </div>
+    </div>
+    <!--Section2-->
+
+    <script src="app.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
