@@ -190,3 +190,21 @@ img {
   cursor: pointer;
 }
 /* Section2 */
+/* Section3 */
+.section3 {
+  position: relative; /* เพิ่ม line นี้เพื่อให้สามารถใช้ z-index ได้ */
+  z-index: 1000; /* เพิ่ม line นี้เพื่อกำหนดลำดับการแสดงผล */
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.6rem;
+  background: linear-gradient(#00000044, #111111bb), url(/img/section3.jpeg);
+  background-position:center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Section3 */
